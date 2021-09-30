@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name klipper_nano)(type KiCad)(uri ${KIPRJMOD}/klipper_nano.pretty)(options "")(descr ""))
+  (lib (name mks_tft)(type KiCad)(uri ${KIPRJMOD}/mks_tft.pretty)(options "")(descr ""))
+)

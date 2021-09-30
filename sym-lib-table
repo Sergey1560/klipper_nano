@@ -1,0 +1,5 @@
+(sym_lib_table
+  (lib (name klipper_nano)(type Legacy)(uri ${KIPRJMOD}/klipper_nano.lib)(options "")(descr ""))
+  (lib (name mks_tft)(type Legacy)(uri ${KIPRJMOD}/mks_tft.lib)(options "")(descr ""))
+  (lib (name iso7721)(type Legacy)(uri ${KIPRJMOD}/iso7721.lib)(options "")(descr ""))
+)

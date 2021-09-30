@@ -1,0 +1,6 @@
+*-bak
+*-rescue.*
+*.bak
+*.zip
+fp-info-cache
+
