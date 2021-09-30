@@ -128,20 +128,14 @@ Text Notes 850  650  0    50   ~ 0
 DEBUG UART
 Wire Notes Line
 	500  2350 3450 2350
-Text Label 1350 6700 0    50   ~ 0
+Text Label 6100 5300 0    50   ~ 0
 CLK0
-Text Label 1350 6800 0    50   ~ 0
+Text Label 6100 5400 0    50   ~ 0
 MISO0
-Text Label 1350 6900 0    50   ~ 0
+Text Label 6100 5500 0    50   ~ 0
 MOSI0
-Text Label 2550 6900 0    50   ~ 0
-CS0
-Text Label 2550 6600 0    50   ~ 0
-TOUCH_CS
-Text Label 2550 6700 0    50   ~ 0
-TOUCH_IRQ
-Text Label 2550 6800 0    50   ~ 0
-DC
+Text Label 6100 5600 0    50   ~ 0
+ACC_CS
 $Comp
 L Isolator:PC817 U2
 U 1 1 60B99A4A
@@ -207,43 +201,20 @@ Connection ~ 2250 3100
 $Comp
 L Connector_Generic:Conn_01x03 J6
 U 1 1 60D3EA2E
-P 1550 7150
-F 0 "J6" V 1514 6962 50  0000 R CNN
-F 1 "SPI_PWR" V 1423 6962 50  0000 R CNN
-F 2 "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical" H 1550 7150 50  0001 C CNN
-F 3 "~" H 1550 7150 50  0001 C CNN
-	1    1550 7150
+P 3950 5150
+F 0 "J6" V 3914 4962 50  0000 R CNN
+F 1 "PWR_OUT" V 3823 4962 50  0000 R CNN
+F 2 "Connector_JST:JST_XH_B3B-XH-A_1x03_P2.50mm_Vertical" H 3950 5150 50  0001 C CNN
+F 3 "~" H 3950 5150 50  0001 C CNN
+	1    3950 5150
 	0    -1   -1   0   
 $EndComp
-Text GLabel 1650 7350 3    50   Input ~ 0
+Text GLabel 4050 5350 3    50   Input ~ 0
 5V
-Text GLabel 1550 7350 3    50   Input ~ 0
+Text GLabel 3950 5350 3    50   Input ~ 0
 GND
-$Comp
-L Connector_Generic:Conn_02x04_Odd_Even J10
-U 1 1 60D5564C
-P 2000 6700
-F 0 "J10" H 2050 7017 50  0000 C CNN
-F 1 "SPI" H 2050 6926 50  0000 C CNN
-F 2 "Connector_IDC:IDC-Header_2x04_P2.54mm_Vertical" H 2000 6700 50  0001 C CNN
-F 3 "~" H 2000 6700 50  0001 C CNN
-	1    2000 6700
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
-	1350 6700 1800 6700
-Wire Wire Line
-	1350 6800 1800 6800
-Wire Wire Line
-	1350 6900 1800 6900
-Wire Wire Line
-	2300 6600 2550 6600
-Wire Wire Line
-	2300 6700 2550 6700
-Wire Wire Line
-	2300 6800 2550 6800
-Wire Wire Line
-	2300 6900 2550 6900
+	6100 5600 6550 5600
 $Comp
 L klipper_nano:Nano_pi_AIR N1
 U 1 1 60DC0D74
@@ -311,10 +282,6 @@ Text Label 10450 1500 2    50   ~ 0
 DC
 Wire Wire Line
 	10450 1500 10200 1500
-Text Label 1350 6600 0    50   ~ 0
-RST
-Wire Wire Line
-	1350 6600 1800 6600
 Text Label 10450 1600 2    50   ~ 0
 RST
 Wire Wire Line
@@ -370,7 +337,7 @@ Text Label 10450 2050 2    50   ~ 0
 RX1
 Wire Wire Line
 	10200 2050 10450 2050
-Text GLabel 1450 7350 3    50   Input ~ 0
+Text GLabel 3850 5350 3    50   Input ~ 0
 3V3
 $Comp
 L Connector_Generic:Conn_01x03 J9
@@ -419,62 +386,62 @@ Wire Notes Line
 Text Notes 1800 3800 0    50   ~ 0
 POWER IN
 $Sheet
-S 1500 5150 1000 950 
+S 1900 5150 1000 950 
 U 60D4B1B2
 F0 "16bit2SPI" 50
 F1 "16bit2SPI.sch" 50
-F2 "VDD" I L 1500 5250 50 
-F3 "TFT_MOSI" I R 2500 5250 50 
-F4 "TFT_CLK" I R 2500 5450 50 
-F5 "TFT_CS" I R 2500 5550 50 
-F6 "TOUCH_CS" I R 2500 5900 50 
-F7 "5V" I L 1500 5350 50 
-F8 "TOUC_IRQ" I R 2500 6000 50 
-F9 "TFT_MISO" I R 2500 5350 50 
-F10 "TFT_LED" I L 1500 5550 50 
-F11 "TFT_RST" I R 2500 5650 50 
-F12 "DC" I R 2500 5750 50 
+F2 "VDD" I L 1900 5250 50 
+F3 "TFT_MOSI" I R 2900 5250 50 
+F4 "TFT_CLK" I R 2900 5450 50 
+F5 "TFT_CS" I R 2900 5550 50 
+F6 "TOUCH_CS" I R 2900 5900 50 
+F7 "5V" I L 1900 5350 50 
+F8 "TOUC_IRQ" I R 2900 6000 50 
+F9 "TFT_MISO" I R 2900 5350 50 
+F10 "TFT_LED" I L 1900 5550 50 
+F11 "TFT_RST" I R 2900 5650 50 
+F12 "DC" I R 2900 5750 50 
 $EndSheet
 Wire Notes Line
 	500  4650 3450 4650
-Text GLabel 1500 5250 0    50   Input ~ 0
+Text GLabel 1900 5250 0    50   Input ~ 0
 3V3
-Text GLabel 1500 5350 0    50   Input ~ 0
+Text GLabel 1900 5350 0    50   Input ~ 0
 5V
-Text GLabel 1500 5550 0    50   Input ~ 0
+Text GLabel 750  5550 0    50   Input ~ 0
 5V
-Text Label 2850 5450 2    50   ~ 0
+Text Label 3250 5450 2    50   ~ 0
 CLK0
 Wire Wire Line
-	2500 5450 2850 5450
-Text Label 2850 5350 2    50   ~ 0
+	2900 5450 3250 5450
+Text Label 3250 5350 2    50   ~ 0
 MISO0
-Text Label 2850 5250 2    50   ~ 0
+Text Label 3250 5250 2    50   ~ 0
 MOSI0
-Text Label 2850 5650 2    50   ~ 0
+Text Label 3250 5650 2    50   ~ 0
 RST
-Text Label 2850 5750 2    50   ~ 0
+Text Label 3250 5750 2    50   ~ 0
 DC
-Text Label 2850 5550 2    50   ~ 0
+Text Label 3250 5550 2    50   ~ 0
 CS0
-Text Label 2950 6000 2    50   ~ 0
+Text Label 3350 6000 2    50   ~ 0
 TOUCH_IRQ
-Text Label 2950 5900 2    50   ~ 0
+Text Label 3350 5900 2    50   ~ 0
 TOUCH_CS
 Wire Wire Line
-	2500 5350 2850 5350
+	2900 5350 3250 5350
 Wire Wire Line
-	2500 5250 2850 5250
+	2900 5250 3250 5250
 Wire Wire Line
-	2500 5550 2850 5550
+	2900 5550 3250 5550
 Wire Wire Line
-	2500 5650 2850 5650
+	2900 5650 3250 5650
 Wire Wire Line
-	2500 5750 2850 5750
+	2900 5750 3250 5750
 Wire Wire Line
-	2500 5900 2950 5900
+	2900 5900 3350 5900
 Wire Wire Line
-	2500 6000 2950 6000
+	2900 6000 3350 6000
 Wire Notes Line
 	3450 2300 3450 7800
 Text Notes 1900 4850 0    50   ~ 0
@@ -812,4 +779,137 @@ Wire Wire Line
 	10200 2900 10600 2900
 Wire Wire Line
 	10800 2900 11100 2900
+$Comp
+L Transistor_FET:IRLML6402 Q2
+U 1 1 615893C4
+P 1300 5650
+F 0 "Q2" V 1642 5650 50  0000 C CNN
+F 1 "IRLML6402" V 1551 5650 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1500 5575 50  0001 L CIN
+F 3 "https://www.infineon.com/dgdl/irlml6402pbf.pdf?fileId=5546d462533600a401535668d5c2263c" H 1300 5650 50  0001 L CNN
+	1    1300 5650
+	0    1    -1   0   
+$EndComp
+Text Label 850  7250 1    50   ~ 0
+LCD_LED
+$Comp
+L Device:R_Small R14
+U 1 1 61598E16
+P 850 6800
+F 0 "R14" H 909 6846 50  0000 L CNN
+F 1 "100" H 909 6755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 850 6800 50  0001 C CNN
+F 3 "~" H 850 6800 50  0001 C CNN
+	1    850  6800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	850  6900 850  7250
+Wire Wire Line
+	750  5550 900  5550
+Wire Wire Line
+	1500 5550 1900 5550
+$Comp
+L Transistor_FET:2N7002 Q1
+U 1 1 615ED167
+P 1200 6300
+F 0 "Q1" H 1405 6346 50  0000 L CNN
+F 1 "IRLML6344TRPBF" H 1405 6255 50  0000 L CNN
+F 2 "Package_TO_SOT_SMD:SOT-23" H 1400 6225 50  0001 L CIN
+F 3 "https://www.onsemi.com/pub/Collateral/NDS7002A-D.PDF" H 1200 6300 50  0001 L CNN
+	1    1200 6300
+	1    0    0    -1  
+$EndComp
+Text GLabel 1300 6800 3    50   Input ~ 0
+GND
+Wire Wire Line
+	850  6700 850  6300
+Wire Wire Line
+	850  6300 950  6300
+Wire Wire Line
+	1300 5850 1300 5900
+$Comp
+L Device:R_Small R15
+U 1 1 61623256
+P 900 5800
+F 0 "R15" H 959 5846 50  0000 L CNN
+F 1 "10K" H 959 5755 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 900 5800 50  0001 C CNN
+F 3 "~" H 900 5800 50  0001 C CNN
+	1    900  5800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	900  5700 900  5550
+Connection ~ 900  5550
+Wire Wire Line
+	900  5550 1100 5550
+Wire Wire Line
+	900  5900 1300 5900
+Connection ~ 1300 5900
+Wire Wire Line
+	1300 5900 1300 6100
+$Comp
+L Device:R_Small R16
+U 1 1 61634648
+P 950 6400
+F 0 "R16" H 1009 6446 50  0000 L CNN
+F 1 "10K" H 1009 6355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" H 950 6400 50  0001 C CNN
+F 3 "~" H 950 6400 50  0001 C CNN
+	1    950  6400
+	1    0    0    -1  
+$EndComp
+Connection ~ 950  6300
+Wire Wire Line
+	950  6300 1000 6300
+Wire Wire Line
+	950  6500 950  6600
+Wire Wire Line
+	950  6600 1300 6600
+Wire Wire Line
+	1300 6600 1300 6800
+Wire Wire Line
+	1300 6500 1300 6600
+Connection ~ 1300 6600
+Text GLabel 6550 5000 0    50   Input ~ 0
+3V3
+Text GLabel 6550 4900 0    50   Input ~ 0
+GND
+$Comp
+L Connector_Generic:Conn_01x02 J10
+U 1 1 6164BB63
+P 6750 4900
+F 0 "J10" H 6830 4892 50  0000 L CNN
+F 1 "ACC_PWR" H 6830 4801 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical" H 6750 4900 50  0001 C CNN
+F 3 "~" H 6750 4900 50  0001 C CNN
+	1    6750 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J11
+U 1 1 6164F83C
+P 6750 5400
+F 0 "J11" H 6830 5392 50  0000 L CNN
+F 1 "ACC_SPI" H 6830 5301 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 6750 5400 50  0001 C CNN
+F 3 "~" H 6750 5400 50  0001 C CNN
+	1    6750 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 5300 6550 5300
+Wire Wire Line
+	6100 5400 6550 5400
+Wire Wire Line
+	6100 5500 6550 5500
+Text Label 10700 3350 2    50   ~ 0
+LCD_LED
+Wire Wire Line
+	10700 3350 10200 3350
+Text Label 10600 3850 2    50   ~ 0
+ACC_CS
+Wire Wire Line
+	10200 3850 10600 3850
 $EndSCHEMATC

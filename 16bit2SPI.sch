@@ -57,13 +57,13 @@ F 3 "" H 2500 3500 50  0001 C CNN
 	1    2500 3500
 	1    0    0    -1  
 $EndComp
-Text HLabel 5000 2750 2    50   Input ~ 0
+Text HLabel 5200 2750 2    50   Input ~ 0
 VDD
-Text HLabel 6600 1300 2    50   Input ~ 0
+Text HLabel 7000 1300 2    50   Input ~ 0
 VDD
-Text HLabel 3300 2850 2    50   Input ~ 0
+Text HLabel 3500 2900 2    50   Input ~ 0
 VDD
-Text HLabel 6450 2750 2    50   Input ~ 0
+Text HLabel 6850 2750 2    50   Input ~ 0
 VDD
 Wire Wire Line
 	5000 3450 5250 3450
@@ -247,4 +247,78 @@ Text GLabel 7850 4150 2    50   Input ~ 0
 GND
 Text HLabel 7850 4250 2    50   Input ~ 0
 VDD
+$Comp
+L Device:C_Small C12
+U 1 1 616FF85C
+P 6700 1200
+F 0 "C12" H 6792 1246 50  0000 L CNN
+F 1 "0.1uF" H 6792 1155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 6700 1200 50  0001 C CNN
+F 3 "~" H 6700 1200 50  0001 C CNN
+	1    6700 1200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6600 1300 6700 1300
+Wire Wire Line
+	7000 1300 6700 1300
+Connection ~ 6700 1300
+Text GLabel 6700 1100 1    50   Input ~ 0
+GND
+$Comp
+L Device:C_Small C11
+U 1 1 61703D98
+P 6550 2650
+F 0 "C11" H 6642 2696 50  0000 L CNN
+F 1 "0.1uF" H 6642 2605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 6550 2650 50  0001 C CNN
+F 3 "~" H 6550 2650 50  0001 C CNN
+	1    6550 2650
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 2750 6550 2750
+Wire Wire Line
+	6550 2750 6850 2750
+Connection ~ 6550 2750
+Text GLabel 6550 2550 1    50   Input ~ 0
+GND
+$Comp
+L Device:C_Small C10
+U 1 1 6170AC3B
+P 5050 2650
+F 0 "C10" H 5142 2696 50  0000 L CNN
+F 1 "0.1uF" H 5142 2605 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 5050 2650 50  0001 C CNN
+F 3 "~" H 5050 2650 50  0001 C CNN
+	1    5050 2650
+	1    0    0    -1  
+$EndComp
+Text GLabel 5050 2550 1    50   Input ~ 0
+GND
+Wire Wire Line
+	5000 2750 5050 2750
+Connection ~ 5050 2750
+Wire Wire Line
+	5050 2750 5200 2750
+$Comp
+L Device:C_Small C9
+U 1 1 617108B6
+P 3400 2750
+F 0 "C9" H 3492 2796 50  0000 L CNN
+F 1 "0.1uF" H 3492 2705 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 3400 2750 50  0001 C CNN
+F 3 "~" H 3400 2750 50  0001 C CNN
+	1    3400 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 2850 3400 2850
+Wire Wire Line
+	3400 2850 3500 2850
+Wire Wire Line
+	3500 2850 3500 2900
+Connection ~ 3400 2850
+Text GLabel 3400 2650 1    50   Input ~ 0
+GND
 $EndSCHEMATC
