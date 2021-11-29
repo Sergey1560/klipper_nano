@@ -61,7 +61,7 @@ Text HLabel 5200 2750 2    50   Input ~ 0
 VDD
 Text HLabel 7000 1300 2    50   Input ~ 0
 VDD
-Text HLabel 3500 2900 2    50   Input ~ 0
+Text HLabel 3500 2850 2    50   Input ~ 0
 VDD
 Text HLabel 6850 2750 2    50   Input ~ 0
 VDD
@@ -171,15 +171,12 @@ TFT_CS
 Text GLabel 5900 2000 0    50   Input ~ 0
 GND
 Wire Wire Line
-	5700 2750 5400 2750
-Wire Wire Line
-	5400 2750 5400 2400
+	5700 2750 5600 2750
 Wire Wire Line
 	5400 1700 5900 1700
 Wire Wire Line
 	4250 2400 5400 2400
 Connection ~ 4250 2400
-Connection ~ 5400 2400
 Wire Wire Line
 	5400 2400 5400 1700
 Text GLabel 7850 1050 2    50   Input ~ 0
@@ -305,8 +302,8 @@ $Comp
 L Device:C_Small C9
 U 1 1 617108B6
 P 3400 2750
-F 0 "C9" H 3492 2796 50  0000 L CNN
-F 1 "0.1uF" H 3492 2705 50  0000 L CNN
+F 0 "C9" H 3500 2900 50  0000 L CNN
+F 1 "0.1uF" H 3500 2800 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric" H 3400 2750 50  0001 C CNN
 F 3 "~" H 3400 2750 50  0001 C CNN
 	1    3400 2750
@@ -316,9 +313,12 @@ Wire Wire Line
 	3300 2850 3400 2850
 Wire Wire Line
 	3400 2850 3500 2850
-Wire Wire Line
-	3500 2850 3500 2900
 Connection ~ 3400 2850
 Text GLabel 3400 2650 1    50   Input ~ 0
 GND
+Wire Wire Line
+	5400 2400 5600 2400
+Wire Wire Line
+	5600 2400 5600 2750
+Connection ~ 5400 2400
 $EndSCHEMATC
